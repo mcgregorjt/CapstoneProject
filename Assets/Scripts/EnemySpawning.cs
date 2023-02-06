@@ -7,10 +7,12 @@ public class EnemySpawning : MonoBehaviour {
     //[SerializeField]public Spriterenderer sr;
     
     public GameObject enemy1Prefab;
+    //public GameObject[];
     public Transform EnemySpawn;
     public float xPos;
     public float yPos;
-    public float startTimeDelay = 7;
+    public int count = 0;
+    public float startTimeDelay = 2;
     public float timeInterval = 3;
 
     //Start is called before the first frame update
@@ -29,9 +31,18 @@ public class EnemySpawning : MonoBehaviour {
 
     void EnemySpawner() 
     {
-        xPos = Random.Range(-1.5f, 2.49f);
-        yPos = Random.Range(5.98f, 6.50f);
-        Vector2 enemyPos = new Vector2(xPos, yPos);
-        Instantiate(enemy1Prefab, enemyPos, EnemySpawn.rotation);
+       
+
+        if ( GameObject.FindGameObjectsWithTag("Enemy").Length < 3) {
+
+            
+            xPos = Random.Range(-1.5f, 2.49f);
+            yPos = Random.Range(5.98f, 6.50f);
+            Vector2 enemyPos = new Vector2(xPos, yPos);
+            Instantiate(enemy1Prefab, enemyPos, EnemySpawn.rotation);
+
+            //count += 1;
+        }
+
     }
 }
