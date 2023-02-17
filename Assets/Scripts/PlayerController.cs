@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;
+    public float moveSpeed = 10f;
    [SerializeField]public Rigidbody2D rb;
     public Weapon weapon;
 
