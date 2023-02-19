@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     Vector2 moveDirection;
     Vector2 mousePosition;
 
+    List<Item> inventory = new List<Item>();
+
 
     // Update is called once per frame
     void Update()
@@ -33,6 +35,20 @@ public class PlayerController : MonoBehaviour
 
         Vector2 aimDirection = mousePosition - rb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.gameObject.name);
+        if(col.gameObject.tag == "Item")
+        {
+            string currItem = col.gameObject.name;
+            //string currItem = col.gameObject.GetComponent<ItemSpawning>().currItemName;
+            Debug.Log("The item " + currItem + " was retrieved!");
+            Destroy(col.gameObject);
+            //collision.gameObject.GetComponent<ItemSpawning>().ItemDeletion();
+ 
+        }
     }
 }
 

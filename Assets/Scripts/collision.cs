@@ -8,15 +8,20 @@ public class collision : MonoBehaviour
     void Start()
     {
         
-
     }
 
-        
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Item")
+        {
+            Debug.Log("We move");
+            Destroy(collider.gameObject);
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy") {
-
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
         if (collision.gameObject.tag == "Bullet")
@@ -24,6 +29,7 @@ public class collision : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    
     // Update is called once per frame
     void Update()
     {
