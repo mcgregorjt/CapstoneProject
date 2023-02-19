@@ -37,8 +37,8 @@ public class EnemySpawning : MonoBehaviour {
         if ( GameObject.FindGameObjectsWithTag("Enemy").Length < 3) {
 
             
-            xPos = Random.Range(-1.5f, 2.49f); 
-            yPos = Random.Range(4.0f, 5.0f); //***Originally -5.98f, 6.50f. Changed for testing***//, 
+            xPos = Random.Range(-1.5f, 2.49f);
+            yPos = Random.Range(5.98f, 6.50f);
             Vector2 enemyPos = new Vector2(xPos, yPos);
             Instantiate(enemy1Prefab, enemyPos, EnemySpawn.rotation);
 
