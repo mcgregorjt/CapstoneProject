@@ -661,13 +661,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 2
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 5000
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1022473142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -758,6 +758,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
+    - target: {fileID: 5414347220201520542, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414347220201520542, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.44
+      objectReference: {fileID: 0}
+
     - target: {fileID: 5414347220550924726, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -810,6 +820,24 @@ PrefabInstance:
       propertyPath: enemyWave.Array.data[0].enemy
       value: 
       objectReference: {fileID: 6363444039911038129, guid: e7f275cea88a479439320e10c9414b13, type: 3}
+
+    - target: {fileID: 5414347220579973185, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414347220579973185, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414347221069671077, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414347221069671077, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.53
+      objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9abdaea33a94bf74299996fbda351d4a, type: 3}
 --- !u!1 &1502294514
