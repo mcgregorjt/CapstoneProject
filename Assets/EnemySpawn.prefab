@@ -84,8 +84,8 @@ MonoBehaviour:
   - {fileID: 5414347221069671077}
   enemyWave:
   - name: A1
-    enemy: {fileID: 6363444039911038129, guid: c0547296bc810aa4797912a46961e4fa, type: 3}
-    count: 2
+    enemy: {fileID: 8410629782844400920, guid: e7f275cea88a479439320e10c9414b13, type: 3}
+    count: 10
     rate: 1
   - name: A2
     enemy: {fileID: 8050142750905496799, guid: aef1778bbae9e314b90238d8fc3048f3, type: 3}
