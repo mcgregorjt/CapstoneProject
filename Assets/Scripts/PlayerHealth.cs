@@ -23,6 +23,11 @@ if(collision.gameObject.tag == "Enemy")
         {
 		TakeDamage(damage);
 	}
+
+        if (collision.gameObject.tag == "EnemyBullet") {
+            Destroy(collision.gameObject);
+            TakeDamage(damage);
+        }
 	if(currentHealth <= 0)
 	{
           Destroy(gameObject);
