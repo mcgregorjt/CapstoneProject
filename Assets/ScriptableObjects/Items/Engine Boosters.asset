@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13ddb5f292236448a2eac12b3069cf8, type: 3}
-  m_Name: Deflector Shield
+  m_Name: Engine Boosters
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 2747690628134850419, guid: 7dc76ab0f3acb214190f995599944629, type: 3}
-  itemName: Deflector Shield
-  dropRate: 10
+  itemSprite: {fileID: -9095717837082945937, guid: 1c909fa19f2a00c42a963587d2d1a425, type: 3}
+  itemName: Engine Boosters
+  dropRate: 5
   duration: 15
