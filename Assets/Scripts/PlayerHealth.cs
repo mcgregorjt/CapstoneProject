@@ -16,21 +16,23 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;        
-   }
-void OnCollisionEnter2D(Collision2D collision)
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy")
         {
-		TakeDamage(damage);
-	}
+		        TakeDamage(damage);
+	      }
 
         if (collision.gameObject.tag == "EnemyBullet") {
             Destroy(collision.gameObject);
             TakeDamage(damage);
         }
-	if(currentHealth <= 0)
-	{
-          Destroy(gameObject);
-	}
-        }
+
+	      if(currentHealth <= 0)
+	      {
+            Destroy(gameObject);
+	      }
+    }
 }
