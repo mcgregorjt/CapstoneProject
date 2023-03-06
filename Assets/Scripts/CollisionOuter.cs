@@ -23,6 +23,9 @@ public class CollisionOuter : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "EnemyBullet") {
+            Destroy(collision.gameObject);
+        }
     }
     // Update is called once per frame
     void Update()

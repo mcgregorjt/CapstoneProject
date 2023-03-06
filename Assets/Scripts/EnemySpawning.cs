@@ -2,15 +2,14 @@ using System.Collections;
 using UnityEngine;
 
 public class EnemySpawning : MonoBehaviour {
-    
+
     //detail what enum does
     public enum SpawnState { spawning, waiting, counting };
 
     //Allows changes/edits to be made inside the inspector in Unity
     [System.Serializable]
 
-    public class EnemyWave 
-    {
+    public class EnemyWave {
         public string name;
         public Transform enemy;
         public int count;
@@ -33,18 +32,16 @@ public class EnemySpawning : MonoBehaviour {
 
     public SpawnState state = SpawnState.counting;
 
-    void Start() 
-    {
+    void Start() {
         waveCountdown = timeBetweenWaves;
 
     }
 
-    void Update() 
-    {
+    void Update() {
         //used to see if enemies are still alive in game
-        if(state == SpawnState.waiting) {
+        if (state == SpawnState.waiting) {
             //see if enemies are still alive
-            if(!enemyIsAlive()) {
+            if (!enemyIsAlive()) {
                 waveCompleted();
             }
 
@@ -54,9 +51,9 @@ public class EnemySpawning : MonoBehaviour {
         }
 
 
-        if(waveCountdown <= 0) {
+        if (waveCountdown <= 0) {
             //checks to see whether or not to intialize the spawning of enemies
-            if(state != SpawnState.spawning) {
+            if (state != SpawnState.spawning) {
                 StartCoroutine(spawnWave(enemyWave[nextWave]));
             }
         }
@@ -69,14 +66,13 @@ public class EnemySpawning : MonoBehaviour {
     }
 
 
-    void waveCompleted() 
-    {
+    void waveCompleted() {
 
         Debug.Log("Wave Completed!");
         state = SpawnState.counting;
         waveCountdown = timeBetweenWaves;
 
-        if(nextWave + 1 > enemyWave.Length - 1) {
+        if (nextWave + 1 > enemyWave.Length - 1) {
             nextWave = 0;
             Debug.Log("All enemy waves complete. Looping");
         }
@@ -84,18 +80,17 @@ public class EnemySpawning : MonoBehaviour {
         else {
             nextWave++;
         }
-        
+
     }
 
 
-    bool enemyIsAlive() 
-    {
+    bool enemyIsAlive() {
         searchCountdown -= Time.deltaTime;
-        if(searchCountdown <= 0f) {
+        if (searchCountdown <= 0f) {
 
             searchCountdown = 1f;
             //very taxing piece of code on compute will check all game objects, thus the more game objects in the game the longer it will take
-            if(GameObject.FindGameObjectWithTag("Enemy") == null) {
+            if (GameObject.FindGameObjectWithTag("Enemy") == null) {
                 return false;
             }
         }
@@ -104,12 +99,11 @@ public class EnemySpawning : MonoBehaviour {
     }
 
     //IEnumerator is used to wait a certain amount of seconds inside a method before continuing
-    IEnumerator spawnWave(EnemyWave wave) 
-    {
+    IEnumerator spawnWave(EnemyWave wave) {
         Debug.Log("Spawning Wave" + wave.name);
         state = SpawnState.spawning;
 
-        for(int i = 0; i < wave.count; i++) {
+        for (int i = 0; i < wave.count; i++) {
             spawnEnemy(wave.enemy);
 
             yield return new WaitForSeconds(1f / wave.rate);
@@ -120,9 +114,18 @@ public class EnemySpawning : MonoBehaviour {
         yield break; // return nothing
     }
 
-    void spawnEnemy(Transform enemy) 
-    {
+    void spawnEnemy(Transform enemy) {
         Debug.Log("Spawning Enemy " + enemy.name);
+
+        /* if(GameObject.Find("enemy4Prefab")) 
+         {
+             for(int i = 3; i < 16; i++) {
+                 Instantiate(enemy, spawnPoints[i].position, transform.rotation);
+             }
+
+           // return;
+
+         }*/
 
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
         //spawn points for enemy (may have to make random points on game plane

@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
 
     List<Item> inventory = new List<Item>();
 
+    void Start()
+    {
+        transform.position = new Vector2(0, 0);
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -43,11 +48,9 @@ public class PlayerController : MonoBehaviour
         if(col.gameObject.tag == "Item")
         {
             string currItem = col.gameObject.name;
-            //string currItem = col.gameObject.GetComponent<ItemSpawning>().currItemName;
             Debug.Log("The item " + currItem + " was retrieved!");
+            GetComponent<ItemCollection>().CollectItem(currItem);
             Destroy(col.gameObject);
-            //collision.gameObject.GetComponent<ItemSpawning>().ItemDeletion();
- 
         }
     }
 }

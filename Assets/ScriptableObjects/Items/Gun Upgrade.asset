@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: 3625043607559282579, guid: 06284c7d0c40f9747bb944a711e7be40, type: 3}
   itemName: Gun Upgrade
   dropRate: 5
+  duration: 15
