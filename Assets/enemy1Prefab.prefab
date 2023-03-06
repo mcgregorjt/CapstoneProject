@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1819540748261352457}
   - component: {fileID: 6768236380371164332}
   - component: {fileID: 5532713845916059473}
+  - component: {fileID: -8013280406681473218}
+  - component: {fileID: -8789050520494615771}
   m_Layer: 9
   m_Name: enemy1Prefab
   m_TagString: Enemy
@@ -71,7 +73,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447138332233372734}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -167,6 +169,33 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d2ef314ba5d1cb41a710c9072c0e32c, type: 2}
   - {fileID: 11400000, guid: 1d905cd678c07724f95182fd2c4366ba, type: 2}
   - {fileID: 11400000, guid: 11868cdcb7d8e934d8c8530d66537b5c, type: 2}
+--- !u!114 &-8013280406681473218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447138332233372734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd844c89d097190448e614f47b6aa8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 4825676137587405990, guid: 98013100bc5fc924db70641efb62edd7, type: 3}
+  pointB: {fileID: 8797224411584520651, guid: 97778ec80a9ee064582ab1dbeb03c2c6, type: 3}
+  speed: 2
+--- !u!114 &-8789050520494615771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447138332233372734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b591140f247444a960d200e932b8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6103490596852699418
 GameObject:
   m_ObjectHideFlags: 0

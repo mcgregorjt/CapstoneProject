@@ -84,16 +84,16 @@ MonoBehaviour:
   - {fileID: 5414347221069671077}
   enemyWave:
   - name: A1
-    enemy: {fileID: 8410629782844400920, guid: e7f275cea88a479439320e10c9414b13, type: 3}
-    count: 10
+    enemy: {fileID: 2984358269218581709, guid: e7f275cea88a479439320e10c9414b13, type: 3}
+    count: 6
     rate: 1
   - name: A2
-    enemy: {fileID: 8050142750905496799, guid: aef1778bbae9e314b90238d8fc3048f3, type: 3}
-    count: 3
+    enemy: {fileID: 5256449202061638580, guid: aef1778bbae9e314b90238d8fc3048f3, type: 3}
+    count: 5
     rate: 1.5
   - name: A3
-    enemy: {fileID: 1614467399622964811, guid: c7dca1d8c5b9d664c988136869c18b10, type: 3}
-    count: 5
+    enemy: {fileID: 7902253992369651253, guid: c7dca1d8c5b9d664c988136869c18b10, type: 3}
+    count: 4
     rate: 2
   timeBetweenWaves: 5
   state: 2
