@@ -15,4 +15,3 @@ MonoBehaviour:
   itemSprite: {fileID: -2413806693520163455, guid: 6b9024ebbefd2f245af62434a9e94362, type: 3}
   itemName: Scrap Material
   dropRate: 20
-  duration: 0

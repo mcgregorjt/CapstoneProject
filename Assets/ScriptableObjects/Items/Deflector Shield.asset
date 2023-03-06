@@ -15,4 +15,3 @@ MonoBehaviour:
   itemSprite: {fileID: 2747690628134850419, guid: 7dc76ab0f3acb214190f995599944629, type: 3}
   itemName: Deflector Shield
   dropRate: 10
-  duration: 15
