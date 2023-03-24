@@ -56,7 +56,7 @@ public class ItemSpawning : MonoBehaviour
             currItemObject.GetComponent<SpriteRenderer>().sprite = spawnedItem.itemSprite;
             currItemObject.name = spawnedItem.itemName;
             currItemObject.gameObject.tag = "Item";
-
+            currItemObject.gameObject.layer = 6;
             float force = 75f;
             Vector2 direction = new Vector2(Random.Range(-1f, 1f), Random.Range(0f, -1f));
             currItemObject.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
