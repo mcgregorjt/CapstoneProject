@@ -198,6 +198,9 @@ MonoBehaviour:
   damage: 1
   currentHealth: 3
   maxHealth: 3
+  extraLives: 3
+  respawnPos: {fileID: 465644975161982566}
+  Player: {fileID: 465644975161982563}
 --- !u!114 &-5088328310697567304
 MonoBehaviour:
   m_ObjectHideFlags: 0
