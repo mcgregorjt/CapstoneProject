@@ -198,6 +198,11 @@ MonoBehaviour:
   damage: 1
   currentHealth: 3
   maxHealth: 3
+
+  extraLives: 3
+  respawnPos: {fileID: 465644975161982566}
+  Player: {fileID: 465644975161982563}
+
 --- !u!114 &-5088328310697567304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +215,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecaa8307f4f6db4caa5cd8d5dcd028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+  shield: {fileID: 1598013222141162214, guid: 37efdb753cc4c1040b2a606ae43963cf, type: 3}
+
   player: {fileID: 0}
   shield: {fileID: 1598013222141162214, guid: 098cc50c97a3c3043918d0a79bea63d5, type: 3}
+
   itemList:
   - {fileID: 11400000, guid: 5d2ef314ba5d1cb41a710c9072c0e32c, type: 2}
   - {fileID: 11400000, guid: e2df043c47e85274bb526288dfa4fa60, type: 2}

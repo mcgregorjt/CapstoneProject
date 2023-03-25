@@ -89,7 +89,11 @@ public class ItemCollection : MonoBehaviour
             /*Engine Boosters: upgrades the movement speed of the player*/
             case "Engine Boosters":
                 float defaultSpeed = GetComponent<PlayerController>().moveSpeed;
+
+                GetComponent<PlayerController>().moveSpeed = 15.1f;
+
                 GetComponent<PlayerController>().moveSpeed = 10.1f;
+
                 yield return new WaitForSecondsRealtime(itemDuration);
                 GetComponent<PlayerController>().moveSpeed = defaultSpeed;
                 break;
