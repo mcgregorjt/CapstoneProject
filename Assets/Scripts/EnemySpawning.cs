@@ -34,7 +34,6 @@ public class EnemySpawning : MonoBehaviour {
 
     void Start() {
         waveCountdown = timeBetweenWaves;
-
     }
 
     void Update() {
@@ -63,6 +62,7 @@ public class EnemySpawning : MonoBehaviour {
             //because, different computers have different frame rate processing speeds.
             waveCountdown -= Time.deltaTime;
         }
+        
     }
 
 
@@ -131,5 +131,23 @@ public class EnemySpawning : MonoBehaviour {
         //spawn points for enemy (may have to make random points on game plane
         Instantiate(enemy, spawnPoints[randSpawnPoint].position, transform.rotation);
 
+        state = SpawnState.waiting;
+
+        yield break; // return nothing
+    }
+
+}
+
+
+    void spawnEnemy(Transform enemy) 
+    {
+        Debug.Log("Spawning Enemy " + enemy.name);
+
+        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+        //spawn points for enemy (may have to make random points on game plane
+        Instantiate(enemy, spawnPoints[randSpawnPoint].position, transform.rotation);
+
     }
 }
+
+
