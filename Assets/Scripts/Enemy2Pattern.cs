@@ -9,14 +9,20 @@ public class Enemy2Pattern : MonoBehaviour
     private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed = 2f;
-
+    private Scoring pointManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
+        pointManager = GameObject.Find("PointManager").GetComponent<Scoring>();
     }
+    void OnCollisionEnter2D(Collision2D col) {
 
+        if (col.gameObject.tag == "Bullet") {
+            pointManager.UpdateScore(8000);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    
     public float moveSpeed = 10f;
    [SerializeField]public Rigidbody2D rb;
     public Weapon weapon;
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
     }
 
+   
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log(col.gameObject.name);

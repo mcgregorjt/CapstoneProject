@@ -9,21 +9,26 @@ public class Enemy1Patterns : MonoBehaviour {
      private Rigidbody2D rb;
      private Transform currentPoint;
      public float speed = 2f;
-
-   /* [SerializeField] float moveSpeed = 1f;
-     Rigidbody2D rb;
-     BoxCollider2D myCollider;*/
+    private Scoring pointManager;
+    /* [SerializeField] float moveSpeed = 1f;
+      Rigidbody2D rb;
+      BoxCollider2D myCollider;*/
 
     // Start is called before the first frame update
     void Start() {
         /*rb = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();*/
-
+        pointManager = GameObject.Find("PointManager").GetComponent<Scoring>();
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
 
     }
+    void OnCollisionEnter2D(Collision2D col) {
 
+        if (col.gameObject.tag == "Bullet") {
+            pointManager.UpdateScore(5000);
+        }
+    }
     // Update is called once per frame
     void Update() {
         Vector2 point = currentPoint.position - transform.position;
