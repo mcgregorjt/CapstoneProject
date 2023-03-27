@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1Patterns : MonoBehaviour {
-
+public class Enemy3Pattern : MonoBehaviour
+{
     private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed = 0f;
@@ -14,8 +14,6 @@ public class Enemy1Patterns : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        rb.velocity = new Vector2(0, -15f);
+        rb.velocity = new Vector2(0, -15f/*Random.Range(-10* Time.deltaTime, 8* Time.deltaTime)*/);
     }
-
-
 }
