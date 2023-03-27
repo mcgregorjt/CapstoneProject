@@ -79,23 +79,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 5414347220579973185}
-  - {fileID: 5414347220201520542}
-  - {fileID: 5414347221069671077}
+  - {fileID: 2529465644770845429, guid: a0a375cafce0a3649b0d97d692fc194f, type: 3}
+  - {fileID: 8572579705395984086, guid: e8a494fc22d24ae4f9859aea37506527, type: 3}
+  - {fileID: 8130945084701769496, guid: aa04822eb04d9684cadbb6d4c5e97479, type: 3}
+  - {fileID: 2388158085695816696, guid: c81d2757f30ee7344b60e4ef6cc59a7b, type: 3}
+  - {fileID: 2996535622040648529, guid: f18b35563bf64f847a2b58473c131aae, type: 3}
+  - {fileID: 8488407542379711669, guid: 9e7ce59ea096ea0429c505c512b07ba8, type: 3}
+  - {fileID: 3685004264144714258, guid: 43272220022f2d746a1ff7246ca9c44c, type: 3}
+  - {fileID: 1857431461293901533, guid: 65977c2341b6a674baa408f7fcbe2043, type: 3}
+  - {fileID: 8327822528828343091, guid: b8c0077f12d4b454c8562d096320d3b2, type: 3}
+  - {fileID: 305253733878557649, guid: edebae659bcf89647ab949b38a03d29e, type: 3}
+  - {fileID: 1579124384329006828, guid: 6e516166cec63884796cc5d2b2a9f72a, type: 3}
+  - {fileID: 6212934258347322539, guid: d266c1eb6d05f004993405fbf7184b87, type: 3}
+  - {fileID: 3457101062302166748, guid: d24223ecda82f7a48b81b3525b0182bd, type: 3}
   enemyWave:
   - name: A1
     enemy: {fileID: 2984358269218581709, guid: e7f275cea88a479439320e10c9414b13, type: 3}
-    count: 6
-    rate: 1
+    count: 13
+    rate: 13
   - name: A2
     enemy: {fileID: 5256449202061638580, guid: aef1778bbae9e314b90238d8fc3048f3, type: 3}
-    count: 5
-    rate: 1.5
+    count: 13
+    rate: 1
   - name: A3
     enemy: {fileID: 7902253992369651253, guid: c7dca1d8c5b9d664c988136869c18b10, type: 3}
-    count: 4
+    count: 7
+    rate: 1
+  - name: A4
+    enemy: {fileID: 3982024331010016296, guid: 3ec41c1ece5853d42a7e2d3c6faada60, type: 3}
+    count: 13
+    rate: 1
+  - name: A5
+    enemy: {fileID: 2984358269218581709, guid: e7f275cea88a479439320e10c9414b13, type: 3}
+    count: 13
     rate: 2
-  timeBetweenWaves: 5
+  enemyWave2:
+  - name: B1
+    enemy: {fileID: 2984358269218581709, guid: e7f275cea88a479439320e10c9414b13, type: 3}
+    count: 13
+    rate: 13
+  - name: B2
+    enemy: {fileID: 5256449202061638580, guid: aef1778bbae9e314b90238d8fc3048f3, type: 3}
+    count: 13
+    rate: 1
+  - name: B3
+    enemy: {fileID: 4103055587770586368, guid: 7ade080f398ceec44b10dd12ea60aa60, type: 3}
+    count: 7
+    rate: 1
+  - name: B4
+    enemy: {fileID: 1024318874062534228, guid: 4d897a812ebf37d40a02ab1c5006c613, type: 3}
+    count: 7
+    rate: 1
+  - name: B5
+    enemy: {fileID: 7902253992369651253, guid: c7dca1d8c5b9d664c988136869c18b10, type: 3}
+    count: 13
+    rate: 2
+  timeBetweenWaves: 1
   state: 2
 --- !u!1 &5414347220579973182
 GameObject:
